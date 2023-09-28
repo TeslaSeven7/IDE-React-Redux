@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*Modifier la scrollbar de façon très générale, comme par exemple sa largeur ou sa hauteur pour les scrollbar respectivement verticales et horizontales.*/
+
+
+.resize-container .left textarea::-webkit-scrollbar {
+    width: 15px;
+    cursor: pointer!important;
+}
+
+.resize-container .left textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-left: 1px solid rgba(68, 76, 85,.2);
+}
+
+.resize-container .left textarea::-webkit-scrollbar-thumb {
+    background: #1c2128;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    border-left: 1px solid rgba(68, 76, 85,.2);
+
+}
