@@ -7,7 +7,7 @@ const initialState = [
 		imgURL: html,
 		buttonContent: 'HTML',
 		code: `<div>
-		<h1>Editeur de code avec React<h1/>
+		<h1>Editeur de code avec React</h1>
 		<p>Codez directement dans votre navigateur !</p>
 </div>`,
 	},
@@ -19,8 +19,8 @@ const initialState = [
 		code: `body {
 	font-family: Robot, sans-serif;
 	padding: 25px;
-	color: #111;
-	background-color: #f1f1f1;
+	color: #22272e;
+	background-color: #96d0f2;
 }`,
 	},
 	{

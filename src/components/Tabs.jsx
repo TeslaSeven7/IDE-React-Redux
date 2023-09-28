@@ -3,11 +3,11 @@ import CodeTab from './CodeTab';
 import ResultTab from './ResultTab';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import Preview from './Preview';
 
 export default function () {
-	const [leftWidth, setLeftWidth] = useState(1300);
+	const [leftWidth, setLeftWidth] = useState(1000);
 	const [isResizing, setIsResizing] = useState(true);
-
 	const minWidth = 500;
 
 	const handleMouseDown = (e) => {
@@ -40,8 +40,8 @@ export default function () {
 	};
 
 	const tabs = useSelector((state) => state.tabs);
-	console.log(tabs);
 	const [tabIndex, setTabIndex] = useState(tabs[0].id);
+	var yolo = 1;
 	return (
 		<div className='flex grow'>
 			<div className='grow flex flex-col w-[175px] shrink-0 text-white border-r border-gray text-lef'>
@@ -56,7 +56,7 @@ export default function () {
 				))}
 			</div>
 			<div className='w-full flex grow relative bg-zinc'>
-				<div className='resize-container flex text-white min-h-screen '>
+				<div className='resize-container flex text-white min-h-screen w-full'>
 					<div
 						className='left'
 						style={{ width: `${leftWidth}px` }}>
@@ -73,13 +73,13 @@ export default function () {
 						<div className=' h-[25px] w-full flex flex-row justify-around px-1'>
 							<div className='h-full w-[2px] bg-gray'></div>
 							<div className='h-full w-[2px] bg-gray'></div>
-							<div className='h-full w-[2px] bg-gray'></div>
 						</div>
 					</div>
 					<div
 						className='right'
 						style={{ width: `calc(100% - ${leftWidth}px)` }}>
-						<ResultTab />
+						{/* <ResultTab /> */}
+						<Preview />
 					</div>
 				</div>
 			</div>
