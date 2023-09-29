@@ -7,8 +7,9 @@ const initialState = [
 		imgURL: html,
 		buttonContent: 'HTML',
 		code: `<div>
-		<h1>Editeur de code avec React</h1>
-		<p>Codez directement dans votre navigateur !</p>
+		<h1>An ideal IDE with React, Redux & TailwindCSS</h1>
+		<p>Code anywhere with your web brower!</p>
+		<p>You can resize me!</p>
 </div>`,
 	},
 	{

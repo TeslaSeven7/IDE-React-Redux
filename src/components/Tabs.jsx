@@ -6,14 +6,14 @@ import { useSelector } from 'react-redux';
 import Preview from './Preview';
 
 export default function () {
-	const [leftWidth, setLeftWidth] = useState(1000);
+	const [leftWidth, setLeftWidth] = useState(1300);
 	const [isResizing, setIsResizing] = useState(true);
 	const minWidth = 500;
 
 	const handleMouseDown = (e) => {
 		setIsResizing(true);
 
-		e = e || window.event;
+		e = e || window.e;
 		pauseEvent(e);
 		document.addEventListener('mousemove', handleMouseMove);
 		document.addEventListener('mouseup', handleMouseUp);
@@ -38,10 +38,10 @@ export default function () {
 		document.removeEventListener('mousemove', handleMouseMove);
 		document.removeEventListener('mouseup', handleMouseUp);
 	};
-
 	const tabs = useSelector((state) => state.tabs);
+	const previewData = useSelector((state) => state.preview);
 	const [tabIndex, setTabIndex] = useState(tabs[0].id);
-	var yolo = 1;
+
 	return (
 		<div className='flex grow'>
 			<div className='grow flex flex-col w-[175px] shrink-0 text-white border-r border-gray text-lef'>
@@ -79,7 +79,7 @@ export default function () {
 						className='right'
 						style={{ width: `calc(100% - ${leftWidth}px)` }}>
 						{/* <ResultTab /> */}
-						<Preview />
+						{previewData.preview && <Preview />}
 					</div>
 				</div>
 			</div>

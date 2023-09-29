@@ -1,14 +1,12 @@
 import Tabs from './components/Tabs';
-import React, { useState } from 'react';
+import PreviewButton from './components/PreviewButton';
 
 function App() {
 	return (
-		<div className='bg-darkzinc min-h-screen flex flex-col'>
+		<div className='bg-darkzinc min-h-screen flex flex-col overflow-hidden max-h-screen'>
 			<div className='px-4 py-4 border-b border-gray flex flex-items-center'>
 				<div className='w-full text-start'>
-					<button className='text-white border border-white py-1 px-3 rounded-md'>
-						Show preview
-					</button>
+					<PreviewButton />
 				</div>
 				<h1 className='w-full text-white text-3xl text-center font-medium'>
 					IDE.al
